@@ -18,7 +18,8 @@
           type="date"
           class="form-control"
           id="birth"
-          [(ngModel)]="currentPerson[0].birth"
+          [ngModel]="currentPerson[0].birth | date: 'yyyy-MM-dd'"
+          (ngModelChange)="currentPerson[0].birth = $event"
           name="birth"
         />
       </div>
